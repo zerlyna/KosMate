@@ -15,7 +15,6 @@ db: Session = SessionLocal()
 # IMPORT DATA
 
 for _, row in df.iterrows():
-
     kos = KosData(
 
         nama_kos=row["Nama Kos"],

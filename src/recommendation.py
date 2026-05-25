@@ -17,15 +17,15 @@ def get_recommendation(
 
     query = f"""
     SELECT
-        nama_kos,
-        jenis,
-        harga,
-        jarak_dari_pens,
-        wifi,
-        ac,
-        dapur,
-        listrik,
-        kamar_mandi
+        nama_kos AS "Nama Kos",
+        jenis AS "Jenis",
+        harga AS "Harga",
+        jarak AS "Jarak dari PENS",
+        wifi AS "WiFi",
+        ac AS "AC",
+        dapur AS "Dapur",
+        listrik AS "Listrik",
+        kamar_mandi AS "Kamar mandi"
     FROM kos_data
     WHERE cluster_kmeans = {cluster}
     """
