@@ -7,7 +7,7 @@ from src.predict import (
 )
 from src.recommendation import (
     get_recommendation
-)
+    )
 
 # =========================
 # FASTAPI

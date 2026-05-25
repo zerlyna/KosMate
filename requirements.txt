@@ -1,7 +1,8 @@
 fastapi
 uvicorn
 pandas
+numpy
 scikit-learn
 joblib
-numpy
-python-multipart
+mlflow
+matplotlib
