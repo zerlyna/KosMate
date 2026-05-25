@@ -1,0 +1,23 @@
+artifact_path: file:///c:/Users/amel/Documents/KosMate/notebooks/mlruns/1/models/m-f7a1c1e4bee94bd7b9ab93c29ddb346c/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.11
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.4.2
+    skops_trusted_types: null
+mlflow_version: 3.12.0
+model_id: m-f7a1c1e4bee94bd7b9ab93c29ddb346c
+model_size_bytes: 2443
+model_uuid: m-f7a1c1e4bee94bd7b9ab93c29ddb346c
+prompts: null
+run_id: 57b923c86b064184b2fa45a1b06e3fef
+utc_time_created: '2026-05-20 08:48:30.377209'
