@@ -11,6 +11,7 @@ from src.recommendation import (
 from src.database import engine
 print(engine)
 
+from src.save_history import save_history
 
 # =========================
 # FASTAPI
@@ -46,14 +47,16 @@ def predict(data: dict):
 
     # predict cluster
     cluster = predict_cluster(
-        input_user,
-        prediksi_harga
-    )
+    input_user,
+    prediksi_harga)
 
-    # recommendation
+    save_history(
+    data, prediksi_harga,
+    cluster)
+
     rekomendasi = get_recommendation(
-        cluster,prediksi_harga
-    )
+    cluster,
+    prediksi_harga)
 
     return {
         "prediksi_harga": int(prediksi_harga),

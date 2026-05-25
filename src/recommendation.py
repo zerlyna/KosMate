@@ -1,12 +1,6 @@
 import pandas as pd
 
-# =========================
-# LOAD DATA
-# =========================
-
-df = pd.read_csv(
-    "data/Kos_Clean.csv"
-)
+from src.database import engine
 
 # =========================
 # RECOMMENDATION
@@ -17,9 +11,12 @@ def get_recommendation(
     prediksi_harga
 ):
 
-    hasil = df[
-        df["Cluster_KMeans"] == cluster
-    ][[
+    # =========================
+    # QUERY DATA DARI POSTGRES
+    # =========================
+
+    query = f"""
+    SELECT
         "Nama Kos",
         "Jenis",
         "Harga",
@@ -29,7 +26,14 @@ def get_recommendation(
         "Dapur",
         "Listrik",
         "Kamar mandi"
-    ]]
+    FROM kos_data
+    WHERE "Cluster_KMeans" = {cluster}
+    """
+
+    hasil = pd.read_sql(
+        query,
+        engine
+    )
 
     # =========================
     # HITUNG SELISIH HARGA
