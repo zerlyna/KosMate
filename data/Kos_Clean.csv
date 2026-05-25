@@ -1,0 +1,161 @@
+Nama Kos,Alamat,Jenis,Harga,WiFi,AC,Dapur,Listrik,Kamar mandi,Jarak dari PENS,Nomor pemilik kos,Cluster_KMeans
+Kos Muslimah,Keputih gang 2b nomor 28,Khusus Perempuan,800000,Ada,Tidak,Ada,Include,Luar,2.8,+62 895-3970-76143,3
+Kos The Gayam,Jalan wismpa permai ix no 21,Khusus Perempuan,1600000,Ada,Ada,Ada,Exclude,Luar,2.4,+62 811-314-413,8
+Griya Risny TMB 114,Tegal Mulyorejo Baru No.114,Khusus Perempuan,800000,Ada,Tidak,Ada,Include,Luar,1.0,081259401184,3
+Kos Khoirul Huda,Jalan Semampir Selatan IIA,Campur,275000,Ada,Tidak,Ada,Include,Luar,6.0,081230303153,12
+Kos pak Mirza E20 ,"Keputih Gg makam, Blok E20",Khusus Laki Laki,450000,Ada,Tidak,Tidak,Include,Luar,3.3,+62 851-0091-8223,4
+Jalan Gebang Wetan No 29,Jalan Gebang Wetan No 29,Khusus Perempuan,875000,Ada,Tidak,Ada,Include,Luar,1.4,085812791782,3
+kos rabel,jl. gebang kidul no 44D1,Khusus Perempuan,1250000,Ada,Ada,Ada,Exclude,Dalam,0.5,082141254595,1
+Jalan TMB No. 47,Jalan TMB No. 47,Khusus Perempuan,700000,Ada,Tidak,Ada,Include,Luar,2.1,+62 851-0157-7167,3
+Gebang Lor 38,Jalan Gebang Lor no.38,Khusus Perempuan,800000,Ada,Tidak,Tidak,Include,Luar,1.5,081252730369,7
+Kos Fio ,"Jl. Kalisari Damen No.KAV-18, RT.002/RW.03, Kalisari, Kec. Mulyorejo, Surabaya, Jawa Timur 60112",Khusus Perempuan,700000,Ada,Tidak,Ada,Include,Luar,2.0,+62 858-1776-6088,3
+Erland Kos,Jl. Klampis Aji 1 no.34,Khusus Laki Laki,650000,Ada,Tidak,Ada,Include,Dalam,3.5,"+62 897-8915-888, +62 899-4325-888",0
+Kost putri 70A gebang kidul,"Jl. Gebang Kidul No.70 A, RW.02, Gebang Putih, Kec. Sukolilo, Surabaya, Jawa Timur 60117",Khusus Perempuan,850000,Ada,Tidak,Tidak,Include,Luar,1.3,085730810003,7
+Kos Laki,Jalan Kejawan putih,Khusus Laki Laki,750000,Ada,Tidak,Ada,Include,Luar,3.5,+62 821-6530-4736,0
+Kos muslimah Bu Yuni,"Jl. Keputih Gg. IIIC No.2, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111",Khusus Perempuan,750000,Ada,Tidak,Ada,Include,Luar,3.3,+62 881-0225-88191,3
+Kost Putra Bu Yeni,Jl. Kejawan Putih Tambak I No.8,Khusus Laki Laki,700000,Ada,Tidak,Tidak,Exclude,Luar,1.0,0859 3114 8799,5
+Kos Pak Rokhim,Jl.Kejawan Gebang I,Khusus Laki Laki,650000,Ada,Tidak,Ada,Include,Luar,2.4,085784626098,0
+Kos Jalan gebang Lor no. 74,Jalan gebang Lor no. 74,Khusus Perempuan,500000,Ada,Tidak,Tidak,Include,Luar,1.8,-,7
+Kos Bapak,Keputih Utara No 20,Khusus Laki Laki,350000,Ada,Tidak,Ada,Include,Luar,2.4,081235719253,0
+Jl. Gubeng Airlangga I No.3,Jl. Gubeng Airlangga I No.3,Khusus Perempuan,700000,Ada,Tidak,Ada,Include,Luar,5.4,085746600699,3
+KOS TMB 79,"Jl. Tegal Mulyorejo Baru No.79, Kejawaan Putih Tamba, Kec. Mulyorejo, Surabaya, Jawa Timur 60112",Khusus Perempuan,500000,Ada,Tidak,Ada,Include,Luar,1.5,+62 823-3022-0330,3
+Kost Muslimah,"Jalan Gebang Wetan, No. 11, Gebang Putih, Kec. Sukolilo.",Khusus Perempuan,600000,Ada,Tidak,Ada,Exclude,Luar,1.8,085812050929,11
+Kost 16 Gang Makam,Jalan Keputih Makam nomor 16,Khusus Perempuan,700000,Ada,Tidak,Ada,Include,Luar,3.8,+62 812-3993-6754,3
+Kost keputih? ,Jalan Makam Blok C No. 14,Khusus Laki Laki,450000,Ada,Tidak,Tidak,Include,Luar,3.8,08183020-8000,4
+Kos TMB,Jalan Tegal Mulyorejo Baru No. 79,Khusus Perempuan,700000,Ada,Tidak,Ada,Include,Luar,1.3,+62 823-3022-0330,3
+Jalan Rodah No. 6,Jalan Rodah No. 6,Khusus Laki Laki,550000,Ada,Tidak,Ada,Include,Luar,1.2,082142097280,0
+Kos TMB 98,"Jalan Tegal Mulyorejo Baru No.96, Kejawaan Putih Tamba, Kec. Mulyorejo, Surabaya, Jawa Timur 60115",Khusus Laki Laki,800000,Ada,Tidak,Tidak,Include,Luar,1.3,+62 852-5845-2550,4
+Rabbani Kost Syariah,Jalan Bhaskara Utara No.C3,Khusus Perempuan,2500000,Ada,Ada,Ada,Exclude,Dalam,1.2,+62 877-4304-3092,1
+Kos,jl arief rahman hakim gan ii kampung deles no.3,Khusus Perempuan,550000,Ada,Ada,Ada,Include,Luar,3.2,+628563102245,14
+Kos Sakinah,"Jl. Wisma Permai I No. 81, Mulyorejo, Surabaya",Khusus Perempuan,1800000,Ada,Ada,Ada,Include,Luar,2.3,+62 856-8762-505,14
+Kos Bu Kadek ,"Kost Bu Kadek, Jalan Sutorejo Sel VIII Blok G 5 No. 11, RT.6/RW.8, Dukuh Sutorejo, Dukuh Sutorejo",Khusus Laki Laki,650000,Tidak,Tidak,Ada,Include,Luar,2.0,+62 877-4987-8887,13
+Kost Wisper 312,"Jl. Wisma Permai III No.12, Mulyorejo, Kec. Mulyorejo, Surabaya, Jawa Timur 60115",Khusus Laki Laki,1300000,Ada,Ada,Ada,Exclude,Luar,0.3,‪+62 812‑3523‑6545‬,9
+Kost Pagar Coklat,Jalan Tegal Mulyorejo Baru No. 44,Khusus Perempuan,750000,Ada,Tidak,Ada,Include,Luar,1.9,+62 813-3192-5747 (Reta) ,3
+kos barokah,"Jalan Kejawan Putih Tambak No. 59, /RW.1, Kejawaan Putih Tamba, Kejawaan Putih Tambak, KOTA SURABAYA, MULYOREJO, JAWA TIMUR, ID, 60112",Campur,1000000,Tidak,Tidak,Tidak,Exclude,Dalam,2.0,+62 812-3337-1977,6
+Kost pak rifaul,Keputih utara gg buntu ,Khusus Laki Laki,650000,Ada,Tidak,Ada,Include,Luar,2.8, 0821-3125-6682,0
+Kos Bu Hikmah,Jl Gebang Wetan no 29B,Khusus Perempuan,850000,Ada,Tidak,Ada,Include,Luar,1.8,+62 858-1279-1782,3
+Kos bu yeni,Jalan kejawan gang 1,Khusus Laki Laki,750000,Ada,Tidak,Tidak,Exclude,Luar,1.0,+62 859-3114-8799,5
+Kos Bapak,Jalan Keputih Gg. III G,Khusus Laki Laki,216000,Ada,Tidak,Ada,Exclude,Dalam,4.0,087844197219,10
+Kos TMB no. 79,Jalan Tegal Mulyorejo Baru no 79.,Khusus Perempuan,500000,Ada,Tidak,Ada,Include,Luar,1.5,+62 823-3022-0330,3
+Kos Pak Sudar,Jalan Gebang Lor No. 29,Khusus Laki Laki,700000,Ada,Tidak,Tidak,Include,Luar,1.3,085330583534,4
+Kos Gebang Wetan  11,Jl. Gebang Wetan No 11,Khusus Perempuan,650000,Ada,Tidak,Ada,Include,Luar,1.8,+62 858-1205-0929,3
+kos hermannas,"Jl. Keputih Tegal Timur III C No.156, RT.001/RW.02, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111",Khusus Laki Laki,925000,Ada,Ada,Ada,Exclude,Luar,4.1,081918091412,9
+Kost Bu emi,Gg puskesmas 28d ,Khusus Perempuan,600000,Ada,Ada,Ada,Include,Luar,1.0,0887 6543 2678,14
+Kost Yusuf,Jl. Kejawan Gebang No. 31,Khusus Laki Laki,750000,Ada,Tidak,Tidak,Include,Dalam,2.0,081216983227,4
+Kost Bu Anwar,Jl Keputiu Tegal Timur IIIC No. 31,Khusus Laki Laki,1100000,Ada,Ada,Ada,Exclude,Luar,3.7,-,9
+Jalan keputih ,Jalan keputih ,Khusus Laki Laki,600000,Ada,Tidak,Tidak,Include,Luar,5.0,08179482485,4
+Kos Priyangan,Jl. Gebang Lor,Khusus Laki Laki,1000000,Ada,Tidak,Tidak,Exclude,Luar,1.0,6285772761517,5
+C27,"Jalan Marina Emas Tengah, Blok C 27 No 7, RT 3 RW 6, Keputih, Sukolilo, Surabaya",Khusus Laki Laki,1600000,Ada,Ada,Ada,Exclude,Dalam,3.8,+62 812-7002-8399,2
+Kos Gebang Wetan 8,Jl. Gebang Wetan No. 8,Khusus Perempuan,850000,Ada,Tidak,Ada,Include,Luar,1.0,+62 813-3187-7236,3
+Kos Muslimah,"Jalan Bumi Marina Emas Timur VI, No 18",Khusus Perempuan,1100000,Ada,Ada,Ada,Exclude,Luar,2.5,+62 812-1768-3029,8
+Perumdos blok u 18,Perumdos blok u 18,Khusus Perempuan,750000,Ada,Tidak,Tidak,Exclude,Luar,1.0,+62 813-3152-4230,7
+Kos daar naja,"Jalan Kejawan Gebang III Gang Sebelah Masjid No. 2, RT.2/RW.4, Gebang Putih,sukolilo ,surabaya jawa timur",Khusus Perempuan,700000,Ada,Tidak,Ada,Include,Luar,3.0,+62 856-0882-6026,3
+Kos Ilonka,"Perum. Wisma Mukti, Jl. Klampis Indah III No. 29, Klampis Ngasem",Khusus Perempuan,1300000,Ada,Ada,Ada,Include,Luar,4.3,+62 813-3351-5631,14
+Kos Oren Keputih,"Jl. Keputih Gg. II A No.50, RT.001/RW.03 60111 Sukolilo Jawa Timur",Khusus Laki Laki,750000,Ada,Tidak,Tidak,Include,Luar,1.6,0821-4200-7221,4
+Kos putra 21,jl. Keputih perintis II No.21,Khusus Laki Laki,1400000,Ada,Ada,Ada,Exclude,Dalam,3.2,+62 852-1626-9797,2
+Kost abah Salam,"keputih, gang 3C no 50",Khusus Laki Laki,500000,Ada,Tidak,Tidak,Exclude,Luar,3.3,tidak punya karena orangnya sudah tua ,5
+Pink,Keputih.1 sebelah SMK 10,Campur,1500000,Ada,Ada,Ada,Exclude,Dalam,2.0,083115156355,6
+Bu Anwar,Jl keputih tegal timur no 31 gang 3C,Khusus Laki Laki,1100000,Ada,Ada,Tidak,Exclude,Luar,2.0,+62 812-3000-8948,9
+Kos Ibu Suwarni Gebang Kidul no 39,"Gebang Kidul, jalan gebang kidul kos no 39",Khusus Laki Laki,640000,Ada,Tidak,Tidak,Include,Luar,2.0,+62 851-0914-4054,4
+Kost diana,Bumi marina emas timur angka romawi 4 nomer 4,Khusus Laki Laki,800000,Ada,Tidak,Ada,Exclude,Dalam,1.8,+6281331761891,10
+KOST GW 31E,"Jl. Gebang Wetan, No. 31E",Khusus Perempuan,925000,Ada,Tidak,Ada,Include,Luar,1.3,+62 812-3511-8882,3
+Kos Gebang Muslim,Jalan Gebang Kidul No. 40,Campur,1300000,Ada,Ada,Tidak,Exclude,Dalam,2.0,+62 813-3068-9407 (kayaknya ya kak 🙏🏻),6
+Kos Muslim Hijau,Jalan Keputih Gg. 1C No. 34,Khusus Laki Laki,1000000,Ada,Tidak,Ada,Include,Luar,3.5,087851164840/08153332325,0
+Kos Putra Mulyasari Utara,"Jl. Mulyosari Utara VI No.15, RT.007/RW.01, Kalisari, Kec. Mulyorejo, Surabaya, Jawa Timur 60112",Khusus Laki Laki,1100000,Ada,Ada,Ada,Include,Luar,3.2,087851004211,0
+Kost Putra Sahabat,Keputih Tegal Timur II Surabaya ,Khusus Laki Laki,1400000,Ada,Ada,Ada,Exclude,Dalam,5.0,0823-3644-0795,2
+Kos Bu Agus,Jalan teknik komputer blok i no. 17 perumdos,Khusus Perempuan,700000,Tidak,Tidak,Tidak,Include,Luar,2.0,+62 812-9964-9966,7
+Kost Aba Seno,Jalan Kejawan Putih Tambak No. 24,Khusus Laki Laki,700000,Ada,Tidak,Tidak,Include,Luar,2.2,+62 851-0237-3224,4
+Kos Bu Siti,Jalan Gebang Kidul No. 77,Campur,780000,Ada,Tidak,Ada,Include,Luar,1.0,+62 857-3123-6919,12
+Kos Pados Surabaya,Jl. Semolowaru Selatan I No.39,Khusus Laki Laki,1200000,Ada,Ada,Ada,Exclude,Luar,5.9,+62 811-3883-328,9
+Putra sahabat,Keputih tegal timur 2 nomor 40,Khusus Laki Laki,1400000,Ada,Ada,Ada,Exclude,Dalam,3.6,082336440795,2
+Kost Griya Siswa,Kecamatan Mulyorejo,Khusus Laki Laki,1900000,Ada,Ada,Ada,Exclude,Dalam,2.5,,2
+Kost Kalisari Damen VIP,Mulyorejo,Khusus Perempuan,1500000,Ada,Ada,Ada,Exclude,Dalam,1.1,,1
+Kost DHR Tipe A,Mulyorejo,Khusus Perempuan,2750000,Ada,Ada,Ada,Include,Dalam,0.6,,1
+Kost Carica Tipe Double,Mulyorejo,Campur,1500000,Ada,Ada,Ada,Include,Dalam,2.9,,6
+Kost Wisper Residence 37 Tipe B,Mulyorejo,Khusus Perempuan,2700000,Ada,Ada,Ada,Exclude,Dalam,0.8,,1
+Kost Eksklusif Dharmahusada,Mulyorejo,Khusus Perempuan,1750000,Ada,Ada,Ada,Exclude,Luar,1.2,,8
+Kost Heryne Executive 1,Mulyorejo,Khusus Perempuan,2500000,Ada,Ada,Ada,Exclude,Luar,0.3,,8
+Kost Armani Tipe plus Two ,Mulyorejo,Khusus Perempuan,1800000,Ada,Ada,Ada,Include,Luar,0.5,,14
+Kost Wisma Permai I Tipe C,Mulyorejo,Khusus Perempuan,1350000,Tidak,Ada,Ada,Include,Luar,1.3,,14
+Kost Gebang Lor 81,Sukolilo,Khusus Laki Laki,750000,Ada,Tidak,Tidak,Include,Luar,0.8,,4
+Kost Kamboja Ungu Tipe Executive,Mulyorejo,Khusus Laki Laki,1650000,Ada,Ada,Ada,Exclude,Luar,0.4,,9
+Kost Dega Jannah Tipe 1,Mulyorejo,Khusus Perempuan,1401000,Ada,Tidak,Ada,Exclude,Dalam,0.7,,11
+Kost Syaifullah Tipe A,Sukolilo,Khusus Laki Laki,835000,Tidak,Tidak,Tidak,Include,Luar,0.7,,4
+Kost Adelwin Hilman W Tipe A,Mulyorejo,Khusus Perempuan,1750000,Ada,Ada,Ada,Exclude,Dalam,1.1,,1
+Kost Mykost Wisma Permai Tipe D,Mulyorejo,Khusus Perempuan,1400000,Ada,Ada,Ada,Exclude,Luar,0.6,,8
+Kost Rainbow,Mulyorejo,Khusus Perempuan,1600000,Ada,Ada,Ada,Exclude,Luar,0.7,,8
+Kost Ibu Tri Wisma Permai,Mulyorejo,Khusus Laki Laki,1000000,Ada,Tidak,Tidak,Include,Luar,0.8,,4
+Kost Gardena Homestay Tipe B,Sukolilo,Campur,2300000,Ada,Ada,Tidak,Exclude,Dalam,0.6,,6
+Kost Ayem Tipe 2,Kecamatan Mulyorejo,Khusus Perempuan,2600000,Ada,Ada,Ada,Exclude,Dalam,0.3,,1
+Kost Inas Nuri Al Salwa Tipe A,Mulyorejo,Khusus Laki Laki,650000,Ada,Tidak,Ada,Include,Luar,0.2,,0
+Kost Sutorejo Tipe A,Mulyorejo,Khusus Laki Laki,1500000,Ada,Ada,Ada,Exclude,Luar,0.7,,9
+Kost Griya Osma,Sukolilo,Khusus Perempuan,1600000,Ada,Ada,Ada,Exclude,Dalam,1.0,,1
+Kost Mulyosari Mas Mulyorejo,Mulyorejo,Khusus Perempuan,1200000,Ada,Ada,Ada,Exclude,Luar,1.5,,8
+Kost Putra Mulyosari,Mulyorejo,Khusus Laki Laki,1300000,Ada,Ada,Tidak,Exclude,Dalam,1.2,,2
+Kost Ibu Rini II Tipe A,Mulyorejo,Khusus Perempuan,900000,Ada,Tidak,Ada,Include,Luar,0.6,,3
+Kost Liana 1 Tipe B,Mulyorejo,Khusus Perempuan,1500000,Ada,Ada,Tidak,Include,Luar,1.5,,7
+Kost Mulyosari Tipe VIP ,Mulyorejo,Khusus Laki Laki,1100000,Ada,Ada,Ada,Include,Luar,1.4,,0
+Kost Wisper Residence 37 Tipe A,Mulyorejo,Khusus Perempuan,2000000,Ada,Ada,Ada,Exclude,Dalam,0.8,,1
+Kost Bu Kuntari,Sukolilo,Khusus Laki Laki,700000,Ada,Tidak,Ada,Exclude,Luar,0.8,,10
+Kost Klampis Aji II Tipe C,Sukolilo,Khusus Laki Laki,875000,Ada,Tidak,Ada,Exclude,Luar,2.0,,10
+Kost Singgahsini Griya 4S,Sukolilo,Khusus Laki Laki,1221000,Ada,Ada,Ada,Exclude,Dalam,1.1,,2
+Kost Singgahsini Mahasiswa Keputih Tipe A,Sukolilo,Khusus Laki Laki,1201000,Ada,Ada,Tidak,Exclude,Luar,1.2,,9
+Kost Bumi Marina Emas Tipe B,Sukolilo,Khusus Laki Laki,786000,Ada,Tidak,Ada,Exclude,Luar,1.4,,10
+Kost Rensi Kejawan Gebang Tipe A,Sukolilo,Khusus Perempuan,1495000,Ada,Ada,Ada,Exclude,Dalam,0.7,,1
+Kost Berkah Keputih,Sukolilo,Khusus Laki Laki,1300000,Ada,Ada,Ada,Exclude,Luar,2.1,,9
+Kost Tannara Tipe B,Sukolilo,Khusus Perempuan,1250000,Ada,Tidak,Ada,Exclude,Luar,2.1,,11
+Kost Tannara I Tipe D,Sukolilo,Khusus Perempuan,1250000,Ada,Ada,Ada,Exclude,Luar,2.0,,8
+Kost Keputih Tegal,Sukolilo,Khusus Laki Laki,1400000,Ada,Ada,Ada,Exclude,Dalam,1.6,,2
+Kost Apik As Sholihin Tipe A,Sukolilo ,Khusus Laki Laki,675000,Ada,Tidak,Ada,Include,Luar,1.3,,0
+Kost Keputih 74,Sukolilo,Khusus Perempuan,1800000,Ada,Ada,Ada,Exclude,Dalam,1.6,,1
+Kost Aranos Executive,Sukolilo,Khusus Laki Laki,1700000,Ada,Ada,Ada,Exclude,Dalam,1.7,,2
+Kost Goldieast ,Sukolilo,Khusus Laki Laki,1700000,Ada,Ada,Ada,Exclude,Dalam,1.9,,2
+Kost Sin 3 Tipe A,Mulyorejo,Khusus Perempuan,1600000,Ada,Ada,Ada,Exclude,Dalam,1.4,,1
+Kost Bu Sri Gojek,Sukolilo,Khusus Laki Laki,450000,Tidak,Tidak,Ada,Include,Luar,1.0,,13
+Kost Puspita Tipe B,Mulyorejo,Khusus Perempuan,1600000,Ada,Ada,Ada,Exclude,Luar,1.9,,8
+Kost ITS Unair Tipe A,Mulyorejo,Khusus Perempuan,950000,Ada,Tidak,Ada,Exclude,Luar,0.6,,11
+Kost Mas Arif Tipe A1,Sukolilo,Khusus Perempuan,1500000,Ada,Ada,Ada,Exclude,Dalam,1.1,,1
+Kost Mulyosari Tipe 1,mulyorejo,Khusus Perempuan,800000,Ada,Tidak,Ada,Exclude,Dalam,1.7,,11
+Kost Klaris Tipe C,Mulyorejo,Khusus Perempuan,1300000,Ada,Ada,Ada,Exclude,Luar,1.6,,8
+Kost E 58 Tipe A,Sukolilo,Khusus Laki Laki,1750000,Ada,Tidak,Ada,Exclude,Luar,1.2,,10
+Kost Harvest Tipe Atas,Sukolilo,Khusus Perempuan,1750000,Ada,Ada,Ada,Exclude,Dalam,1.2,,1
+Kost Ibu Hari,Sukolilo,Khusus Perempuan,850000,Ada,Tidak,Ada,Include,Luar,1.0,,3
+Kost Rifa Tipe B,Sukolilo,Khusus Laki Laki,750000,Ada,Tidak,Ada,Include,Luar,1.2,,0
+Kost Azamarsy,Sukolilo,Khusus Laki Laki,1255000,Ada,Ada,Ada,Exclude,Dalam,1.8,,2
+Kost Bu Titik Kav 25,Mulyorejo,Khusus Perempuan,1255000,Ada,Ada,Ada,Exclude,Dalam,2.4,,1
+Kost Wilfrid Tipe A,Sukolilo,Khusus Laki Laki,1200000,Ada,Ada,Ada,Exclude,Luar,1.3,,9
+Kost Keputih Hijau Ungu 9 ,Sukolilo,Khusus Laki Laki,960000,Ada,Tidak,Ada,Include,Dalam,1.1,,0
+ Kost Tutik Keputih Tipe A,Sukolilo,Khusus Laki Laki,650000,Ada,Tidak,Ada,Include,Luar,1.2,,0
+Kost Nadiya Keputih Tipe A,Sukolilo,Khusus Perempuan,1200000,Ada,Ada,Ada,Exclude,Dalam,1.2,,1
+Kost Kampus ITS AC,Sukolilo,Khusus Laki Laki,1200000,Ada,Ada,Ada,Include,Luar,0.7,,0
+Kost Koshie Pu Reguler,Mulyorejo,Khusus Laki Laki,2000000,Ada,Ada,Ada,Exclude,Dalam,1.6,,2
+Kost Bu Irianto TS Kampus C Tipe A,Mulyorejo,Khusus Laki Laki,1400000,Ada,Ada,Ada,Exclude,Luar,0.6,,9
+Kost Pak Biono ITS Kejawan Tipe A,Sukolilo,Khusus Perempuan,650000,Ada,Tidak,Ada,Exclude,Luar,0.8,,11
+Kost Graha KTT 1 Tipe VIP,Sukolilo,Khusus Laki Laki,1500000,Ada,Ada,Ada,Exclude,Dalam,1.3,,2
+Kost Hijau,Sukolilo,Khusus Laki Laki,750000,Tidak,Tidak,Tidak,Exclude,Dalam,0.7,,5
+Kost Karyawati Mahasiswa,Sukolilo,Khusus Perempuan,900000,Ada,Tidak,Ada,Include,Luar,2.0,,3
+Kost Industrial Tipe A,Mulyorejo,Khusus Perempuan,1550000,Ada,Ada,Ada,Exclude,Dalam,1.1,,1
+Kost Dzakir,Mulyorejo,Khusus Laki Laki,800000,Tidak,Tidak,Ada,Exclude,Luar,1.1,,13
+Kost La ana Tipe A,Sukolilo,Khusus Laki Laki,1300000,Ada,Ada,Ada,Exclude,Dalam,1.8,,2
+Kost Jalan Manyar Kertoadi,Mulyorejo,Khusus Laki Laki,110000,Ada,Ada,Ada,Exclude,Luar,1.5,,9
+Kost Ratna Cempaka,Mulyorejo,Khusus Perempuan,1075000,Ada,Ada,Ada,Exclude,Luar,1.1,,8
+KOst Rumah Djuwita Tipe VVIP,Mulyorejo,Khusus Laki Laki,850000,Tidak,Tidak,Ada,Exclude,Luar,0.9,,13
+ Kost Ayska Executive,Mulyorejo,Khusus Perempuan,1650000,Ada,Ada,Ada,Include,Dalam,1.7,,1
+Kost SPR,Sukolilo,Khusus Laki Laki,900000,Ada,Tidak,Ada,Include,Luar,1.9,,0
+Kost Budi Keputih ,Sukolilo,Khusus Laki Laki,1350000,Ada,Ada,Ada,Exclude,Dalam,1.2,,2
+Kost Mafaza House Tipe Modern,Sukolilo,Khusus Laki Laki,1300000,Ada,Ada,Ada,Exclude,Dalam,2.2,,2
+Kost Dhomey,Sukolilo,Khusus Laki Laki,1500000,Ada,Ada,Ada,Exclude,Dalam,1.6,,2
+kost Shafira Tipe B,Sukolilo,Khusus Perempuan,750000,Ada,Tidak,Tidak,Include,Luar,0.8,,7
+Kost keputih 1 1 A ,Sukolilo,Khusus Laki Laki,612000,Ada,Tidak,Ada,Include,Luar,0.8,,0
+Kost Domin Tipe A,Sukolilo,Khusus Perempuan,1600000,Ada,Ada,Ada,Exclude,Dalam,1.9,,1
+Kost qanitah Sukolilo,Sukolilo,Khusus Perempuan,1050000,Ada,Tidak,Ada,Include,Dalam,1.9,,3
+Kost Griya Maharani Superior Mulyorejo Surabaya,Mulyorejo,Khusus Perempuan,2400000,Ada,Ada,Ada,Exclude,Dalam,0.6,,1
+Kost Azalia Wisper Mulyorejo Surabaya,Mulyorejo,Khusus Laki Laki,1500000,Ada,Ada,Ada,Exclude,Luar,0.6,,9
+Kost Bu Nia Tipe B Sukolilo Surabaya,Sukolilo,Khusus Laki Laki,750000,Tidak,Tidak,Ada,Exclude,Luar,0.7,,13
+Kost Bhaskara 4 Mulyorejo Surabaya,Mulyorejo,Khusus Perempuan,1000000,Ada,Tidak,Ada,Include,Luar,1.1,,3
+Kost Johan Sukolilo Surabaya,Sukolilo,Khusus Laki Laki,900000,Tidak,Tidak,Tidak,Exclude,Luar,0.8,,5
+Kost Pak Kasno Tipe B Sukolilo Surabaya,Sukolilo,Khusus Laki Laki,750000,Ada,Tidak,Tidak,Include,Luar,0.7,,4
+Kost Graha F3 Tipe C Sukolilo Surabaya,Sukolilo,Khusus Laki Laki,900000,Ada,Tidak,Tidak,Include,Luar,0.7,,4
+Kost Bu Chatimah Sukolilo Surabaya,Sukolilo,Khusus Laki Laki,650000,Ada,Tidak,Tidak,Include,Luar,0.9,,4
+Kost Rachmat Tipe Non AC Mulyorejo Surabaya,Mulyorejo,Khusus Perempuan,750000,Ada,Tidak,Ada,Exclude,Luar,0.6,,11
+Kost Griya Pena Sukolilo Surabaya,Sukolilo,Khusus Laki Laki,1000000,Ada,Ada,Ada,Exclude,Luar,0.7,,9
