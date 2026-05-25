@@ -8,6 +8,9 @@ from src.predict import (
 from src.recommendation import (
     get_recommendation
     )
+from src.database import engine
+print(engine)
+
 
 # =========================
 # FASTAPI
