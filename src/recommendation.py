@@ -17,48 +17,35 @@ def get_recommendation(
 
     query = f"""
     SELECT
-        "Nama Kos",
-        "Jenis",
-        "Harga",
-        "Jarak dari PENS",
-        "WiFi",
-        "AC",
-        "Dapur",
-        "Listrik",
-        "Kamar mandi"
+        nama_kos,
+        jenis,
+        harga,
+        jarak_dari_pens,
+        wifi,
+        ac,
+        dapur,
+        listrik,
+        kamar_mandi
     FROM kos_data
-    WHERE "Cluster_KMeans" = {cluster}
+    WHERE cluster_kmeans = {cluster}
     """
 
     hasil = pd.read_sql(
         query,
         engine
     )
-
-    # =========================
     # HITUNG SELISIH HARGA
-    # =========================
 
-    hasil["Selisih_Harga"] = abs(
-        hasil["Harga"] - prediksi_harga
-    )
+    hasil["selisih_harga"] = abs(hasil["harga"] - prediksi_harga)
 
-    # =========================
     # SORT REKOMENDASI
-    # =========================
 
-    hasil = hasil.sort_values(
-        by="Selisih_Harga"
-    )
+    hasil = hasil.sort_values(by="selisih_harga")
 
-    # =========================
     # DROP KOLOM BANTUAN
-    # =========================
 
     hasil = hasil.drop(
-        columns=["Selisih_Harga"]
-    )
+        columns=["selisih_harga"])
 
     return hasil.to_dict(
-        orient="records"
-    )
+        orient="records")
