@@ -10,8 +10,8 @@ from src.recommendation import (
     )
 from src.database import engine
 print(engine)
-
 from src.save_history import save_history
+from fastapi.middleware.cors import CORSMiddleware
 
 # =========================
 # FASTAPI
@@ -19,6 +19,12 @@ from src.save_history import save_history
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],)
 # =========================
 # ROOT
 # =========================
