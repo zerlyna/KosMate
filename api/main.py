@@ -42,24 +42,24 @@ def predict(data: dict):
 
     # predict harga
     prediksi_harga = predict_price(
-        input_user
-    )
+        input_user)
 
     # predict cluster
     cluster = predict_cluster(
     input_user,
     prediksi_harga)
 
-    save_history(
-    data, prediksi_harga,
-    cluster)
-
     rekomendasi = get_recommendation(
     cluster,
     prediksi_harga)
+    
+    save_history(
+    data,
+    prediksi_harga,
+    cluster,
+    rekomendasi)
 
     return {
         "prediksi_harga": int(prediksi_harga),
         "cluster": cluster,
-        "rekomendasi": rekomendasi
-    }
+        "rekomendasi": rekomendasi}
