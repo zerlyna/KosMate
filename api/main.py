@@ -3,8 +3,8 @@ from fastapi import FastAPI
 from src.preprocessing import preprocess_input
 from src.predict import (
     predict_price,
-    predict_cluster
-)
+    predict_cluster)
+
 from src.recommendation import (
     get_recommendation
     )

@@ -4,8 +4,7 @@ from sqlalchemy import (
     String,
     Float,
     ForeignKey,
-    DateTime
-)
+    DateTime)
 
 from sqlalchemy.orm import declarative_base
 from datetime import datetime
@@ -23,8 +22,7 @@ class UserInput(Base):
     id = Column(
         Integer,
         primary_key=True,
-        index=True
-    )
+        index=True)
 
     jarak = Column(Float)
     jenis = Column(String)
@@ -33,11 +31,9 @@ class UserInput(Base):
     dapur = Column(String)
     listrik = Column(String)
     kamar_mandi = Column(String)
-
     created_at = Column(
         DateTime,
-        default=datetime.utcnow
-    )
+        default=datetime.utcnow)
 
 # =========================
 # PREDICTION RESULT
@@ -50,27 +46,19 @@ class PredictionResult(Base):
     id = Column(
         Integer,
         primary_key=True,
-        index=True
-    )
+        index=True)
 
     user_input_id = Column(
         Integer,
-        ForeignKey("user_input.id")
-    )
+        ForeignKey("user_input.id"))
 
     prediksi_harga = Column(Float)
-
     cluster = Column(Integer)
-
     created_at = Column(
         DateTime,
-        default=datetime.utcnow
-    )
+        default=datetime.utcnow)
 
-# =========================
 # KOS DATA
-# =========================
-
 class KosData(Base):
     __tablename__ = "kos_data"
 
@@ -89,3 +77,24 @@ class KosData(Base):
     listrik = Column(String)
     kamar_mandi = Column(String)
     cluster = Column(Integer)
+
+#History rekomendasi
+class RecommendationHistory(Base):
+    __tablename__ = "recommendation_history"
+
+    id = Column(
+        Integer,
+        primary_key=True,
+        index=True)
+
+    prediction_result_id = Column(
+        Integer,
+        ForeignKey("prediction_result.id"))
+
+    kos_id = Column(
+        Integer,
+        ForeignKey("kos_data.id"))
+
+    created_at = Column(
+        DateTime,
+        default=datetime.utcnow)

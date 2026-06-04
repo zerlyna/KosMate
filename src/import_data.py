@@ -18,25 +18,15 @@ for _, row in df.iterrows():
     kos = KosData(
 
         nama_kos=row["Nama Kos"],
-
         jenis=row["Jenis"],
-
         harga=row["Harga"],
-
         jarak=row["Jarak dari PENS"],
-
         wifi=row["WiFi"],
-
         ac=row["AC"],
-
         dapur=row["Dapur"],
-
         listrik=row["Listrik"],
-
         kamar_mandi=row["Kamar mandi"],
-
-        cluster=row["Cluster_KMeans"]
-    )
+        cluster=row["Cluster_KMeans"])
 
     db.add(kos)
 

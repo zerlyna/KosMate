@@ -9,8 +9,7 @@ from src.database import engine
 def save_history(
     data,
     prediksi_harga,
-    cluster
-):
+    cluster):
 
     history = pd.DataFrame({
         "jarak": [data["jarak"]],
@@ -21,14 +20,12 @@ def save_history(
         "listrik": [data["listrik"]],
         "kamar_mandi": [data["kamar_mandi"]],
         "prediksi_harga": [prediksi_harga],
-        "cluster": [cluster]
-    })
+        "cluster": [cluster]})
 
     history.to_sql(
         "history_predict",
         engine,
         if_exists="append",
-        index=False
-    )
+        index=False)
 
     print("History berhasil disimpan")
