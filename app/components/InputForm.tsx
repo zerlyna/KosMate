@@ -3,29 +3,29 @@
 import { useState } from "react";
 import { InputUser } from "@/lib/api";
 
+const navy = "#1B2A4A";
+const blue = "#2D6BE4";
+const gray = "#6B7280";
+
 interface Props {
   onSubmit: (input: InputUser) => void;
   loading: boolean;
 }
 
-const Field = ({
+const ToggleField = ({
   label,
-  emoji,
   value,
   onChange,
   options,
 }: {
   label: string;
-  emoji: string;
   value: string;
   onChange: (v: string) => void;
   options: { label: string; value: string }[];
 }) => (
-  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-    <label style={{ fontSize: "13px", fontWeight: 500, color: "#64748B", display: "flex", alignItems: "center", gap: "6px" }}>
-      <span>{emoji}</span>{label}
-    </label>
-    <div style={{ display: "flex", gap: "8px" }}>
+  <div>
+    <p style={{ fontSize: "12px", fontWeight: 600, color: gray, marginBottom: "8px" }}>{label}</p>
+    <div style={{ display: "flex", gap: "6px" }}>
       {options.map((opt) => (
         <button
           key={opt.value}
@@ -33,15 +33,15 @@ const Field = ({
           onClick={() => onChange(opt.value)}
           style={{
             flex: 1,
-            padding: "10px",
-            borderRadius: "10px",
+            padding: "9px 12px",
+            borderRadius: "8px",
             fontSize: "13px",
             fontWeight: 500,
             cursor: "pointer",
+            border: value === opt.value ? `1.5px solid ${navy}` : "1.5px solid #E5E7EB",
+            backgroundColor: value === opt.value ? navy : "white",
+            color: value === opt.value ? "white" : "#374151",
             transition: "all 0.15s",
-            border: value === opt.value ? "2px solid #0F172A" : "2px solid #E2E8F0",
-            backgroundColor: value === opt.value ? "#0F172A" : "white",
-            color: value === opt.value ? "white" : "#0F172A",
           }}
         >
           {opt.label}
@@ -53,7 +53,7 @@ const Field = ({
 
 export default function InputForm({ onSubmit, loading }: Props) {
   const [form, setForm] = useState<InputUser>({
-    jarak: 1,
+    jarak: 0,
     jenis: "Campur",
     wifi: "Ada",
     ac: "Ada",
@@ -67,83 +67,110 @@ export default function InputForm({ onSubmit, loading }: Props) {
       onSubmit={(e) => { e.preventDefault(); onSubmit(form); }}
       style={{
         backgroundColor: "white",
-        border: "1px solid #E2E8F0",
-        borderRadius: "20px",
-        padding: "32px",
-        boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
-        display: "flex",
-        flexDirection: "column",
-        gap: "24px",
+        border: "1px solid #E5E7EB",
+        borderRadius: "16px",
+        overflow: "hidden",
+        fontFamily: "'Inter', sans-serif",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: "12px", paddingBottom: "16px", borderBottom: "1px solid #F1F5F9" }}>
-        <div style={{ backgroundColor: "#0F172A", width: "40px", height: "40px", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px" }}>🏠</div>
+      <div style={{ padding: "24px 28px", borderBottom: "1px solid #F3F4F6" }}>
+        <p style={{ fontWeight: 700, fontSize: "16px", color: navy }}>Preferensi Kos</p>
+        <p style={{ fontSize: "13px", color: "#9CA3AF", marginTop: "2px" }}>Sesuaikan dengan kebutuhan kamu</p>
+      </div>
+
+      <div style={{ padding: "24px 28px", display: "flex", flexDirection: "column", gap: "20px" }}>
+
         <div>
-          <p style={{ fontWeight: 700, fontSize: "16px", color: "#0F172A" }}>Preferensi Kos</p>
-          <p style={{ fontSize: "13px", color: "#94A3B8" }}>Isi sesuai kebutuhan kamu</p>
+          <p style={{ fontSize: "12px", fontWeight: 600, color: gray, marginBottom: "8px" }}>Jarak dari PENS (km)</p>
+          <input
+            type="text"
+            placeholder="Contoh: 1.5"
+            value={form.jarak === 0 ? "" : form.jarak}
+            onChange={(e) => {
+              const val = e.target.value;
+              setForm({ ...form, jarak: val === "" ? 0 : parseFloat(val) });
+            }}
+            style={{
+              width: "100%",
+              padding: "9px 14px",
+              borderRadius: "8px",
+              border: "1.5px solid #E5E7EB",
+              fontSize: "14px",
+              color: navy,
+              outline: "none",
+              backgroundColor: "white",
+              fontFamily: "'Inter', sans-serif",
+            }}
+          />
         </div>
-      </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-        <label style={{ fontSize: "13px", fontWeight: 500, color: "#64748B", display: "flex", alignItems: "center", gap: "6px" }}>
-          📍 Jarak dari PENS (km)
-        </label>
-        <input
-          type="number"
-          min={0}
-          step={0.1}
-          value={form.jarak}
-          onChange={(e) => {
-            const val = parseFloat(e.target.value);
-            setForm({ ...form, jarak: isNaN(val) ? 0 : val });
-          }}
+        <ToggleField label="Jenis Kos" value={form.jenis} onChange={(v) => setForm({ ...form, jenis: v })}
+          options={[{ label: "Campur", value: "Campur" }, { label: "Laki-laki", value: "Khusus Laki Laki" }, { label: "Perempuan", value: "Khusus Perempuan" }]} />
+
+        <div>
+          <p style={{ fontSize: "12px", fontWeight: 600, color: gray, marginBottom: "12px" }}>Fasilitas</p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+            {[
+              { label: "WiFi", key: "wifi" as keyof InputUser },
+              { label: "AC", key: "ac" as keyof InputUser },
+              { label: "Dapur", key: "dapur" as keyof InputUser },
+              { label: "Kamar Mandi", key: "kamar_mandi" as keyof InputUser, opts: [{ label: "Dalam", value: "Dalam" }, { label: "Luar", value: "Luar" }] },
+            ].map((f) => {
+              const opts = f.opts || [{ label: "Ada", value: "Ada" }, { label: "Tidak", value: "Tidak" }];
+              return (
+                <div key={f.key}>
+                  <p style={{ fontSize: "11px", fontWeight: 600, color: "#9CA3AF", marginBottom: "6px" }}>{f.label}</p>
+                  <div style={{ display: "flex", gap: "5px" }}>
+                    {opts.map((opt) => (
+                      <button
+                        key={opt.value}
+                        type="button"
+                        onClick={() => setForm({ ...form, [f.key]: opt.value })}
+                        style={{
+                          flex: 1,
+                          padding: "7px",
+                          borderRadius: "7px",
+                          fontSize: "12px",
+                          fontWeight: 500,
+                          cursor: "pointer",
+                          border: form[f.key] === opt.value ? `1.5px solid ${navy}` : "1.5px solid #E5E7EB",
+                          backgroundColor: form[f.key] === opt.value ? navy : "white",
+                          color: form[f.key] === opt.value ? "white" : "#374151",
+                        }}
+                      >
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <ToggleField label="Listrik" value={form.listrik} onChange={(v) => setForm({ ...form, listrik: v })}
+          options={[{ label: "Include", value: "Include" }, { label: "Exclude", value: "Exclude" }]} />
+
+        <button
+          type="submit"
+          disabled={loading}
           style={{
-            width: "100%",
-            padding: "10px 14px",
+            backgroundColor: loading ? "#9CA3AF" : blue,
+            color: "white",
+            border: "none",
+            padding: "13px",
             borderRadius: "10px",
-            border: "2px solid #E2E8F0",
+            fontWeight: 600,
             fontSize: "14px",
-            color: "#0F172A",
-            outline: "none",
-            backgroundColor: "white",
+            cursor: loading ? "not-allowed" : "pointer",
+            width: "100%",
+            fontFamily: "'Inter', sans-serif",
+            letterSpacing: "-0.2px",
           }}
-        />
+        >
+          {loading ? "Mencari..." : "Cari Rekomendasi"}
+        </button>
       </div>
-
-      <Field label="Jenis Kos" emoji="🏘️" value={form.jenis} onChange={(v) => setForm({ ...form, jenis: v })}
-        options={[{ label: "Campur", value: "Campur" }, { label: "Laki-laki", value: "Khusus Laki Laki" }, { label: "Perempuan", value: "Khusus Perempuan" }]} />
-      <Field label="WiFi" emoji="📶" value={form.wifi} onChange={(v) => setForm({ ...form, wifi: v })}
-        options={[{ label: "Ada", value: "Ada" }, { label: "Tidak", value: "Tidak" }]} />
-      <Field label="AC" emoji="❄️" value={form.ac} onChange={(v) => setForm({ ...form, ac: v })}
-        options={[{ label: "Ada", value: "Ada" }, { label: "Tidak", value: "Tidak" }]} />
-      <Field label="Dapur" emoji="🍳" value={form.dapur} onChange={(v) => setForm({ ...form, dapur: v })}
-        options={[{ label: "Ada", value: "Ada" }, { label: "Tidak", value: "Tidak" }]} />
-      <Field label="Listrik" emoji="⚡" value={form.listrik} onChange={(v) => setForm({ ...form, listrik: v })}
-        options={[{ label: "Include", value: "Include" }, { label: "Exclude", value: "Exclude" }]} />
-      <Field label="Kamar Mandi" emoji="🚿" value={form.kamar_mandi} onChange={(v) => setForm({ ...form, kamar_mandi: v })}
-        options={[{ label: "Dalam", value: "Dalam" }, { label: "Luar", value: "Luar" }]} />
-
-      <button
-        type="submit"
-        disabled={loading}
-        style={{
-          backgroundColor: loading ? "#94A3B8" : "#0F172A",
-          color: "white",
-          border: "none",
-          padding: "14px",
-          borderRadius: "12px",
-          fontWeight: 600,
-          fontSize: "14px",
-          cursor: loading ? "not-allowed" : "pointer",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "8px",
-          marginTop: "8px",
-        }}
-      >
-        {loading ? "⏳ Mencari Rekomendasi..." : "🔍 Cari Rekomendasi Kos"}
-      </button>
     </form>
   );
 }

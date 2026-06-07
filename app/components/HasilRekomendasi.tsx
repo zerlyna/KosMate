@@ -2,71 +2,54 @@
 
 import { HasilPrediksi, Kos } from "@/lib/api";
 
+const navy = "#1B2A4A";
+const blue = "#2D6BE4";
+const gray = "#6B7280";
+
 const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
   <div style={{
     backgroundColor: "white",
-    border: rank === 1 ? "2px solid #F59E0B" : "1px solid #E2E8F0",
-    borderRadius: "14px",
-    padding: "18px 20px",
-    position: "relative",
-    transition: "box-shadow 0.2s",
+    border: "1px solid #E5E7EB",
+    borderRadius: "12px",
+    padding: "20px 24px",
+    borderLeft: rank === 1 ? `3px solid ${blue}` : "1px solid #E5E7EB",
   }}>
-    {rank === 1 && (
-      <div style={{
-        position: "absolute",
-        top: "-12px",
-        left: "20px",
-        backgroundColor: "#F59E0B",
-        color: "#0F172A",
-        fontSize: "11px",
-        fontWeight: 700,
-        padding: "2px 12px",
-        borderRadius: "20px",
-      }}>⭐ Terbaik</div>
-    )}
-    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-        <div style={{
-          width: "36px",
-          height: "36px",
-          borderRadius: "10px",
-          backgroundColor: rank === 1 ? "#F59E0B" : "#F1F5F9",
-          color: rank === 1 ? "#0F172A" : "#64748B",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "14px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+        <span style={{
+          fontSize: "12px",
           fontWeight: 700,
-          fontSize: "14px",
-        }}>{rank}</div>
+          color: rank === 1 ? blue : "#9CA3AF",
+          minWidth: "20px",
+        }}>#{rank}</span>
         <div>
-          <p style={{ fontWeight: 600, fontSize: "14px", color: "#0F172A" }}>{kos.nama_kos}</p>
-          <p style={{ fontSize: "12px", color: "#94A3B8", marginTop: "2px" }}>📍 {kos.jarak} km dari PENS</p>
+          <p style={{ fontWeight: 600, fontSize: "14px", color: navy, marginBottom: "3px" }}>{kos.nama_kos}</p>
+          <p style={{ fontSize: "12px", color: gray }}>{kos.jarak} km dari PENS</p>
         </div>
       </div>
       <div style={{ textAlign: "right" }}>
-        <p style={{ fontWeight: 700, fontSize: "15px", color: "#0F172A" }}>Rp {kos.harga.toLocaleString("id-ID")}</p>
-        <p style={{ fontSize: "11px", color: "#94A3B8" }}>per bulan</p>
+        <p style={{ fontWeight: 700, fontSize: "15px", color: navy }}>Rp {kos.harga.toLocaleString("id-ID")}</p>
+        <p style={{ fontSize: "11px", color: "#9CA3AF" }}>/ bulan</p>
       </div>
     </div>
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", paddingTop: "12px", borderTop: "1px solid #F3F4F6" }}>
       {[
-        { label: "WiFi", active: kos.wifi === "Ada", emoji: "📶" },
-        { label: "AC", active: kos.ac === "Ada", emoji: "❄️" },
-        { label: "Dapur", active: kos.dapur === "Ada", emoji: "🍳" },
-        { label: "Listrik Inc.", active: kos.listrik === "Include", emoji: "⚡" },
-        { label: "KM Dalam", active: kos.kamar_mandi === "Dalam", emoji: "🚿" },
+        { label: "WiFi", active: kos.wifi === "Ada" },
+        { label: "AC", active: kos.ac === "Ada" },
+        { label: "Dapur", active: kos.dapur === "Ada" },
+        { label: "Listrik Include", active: kos.listrik === "Include" },
+        { label: "KM Dalam", active: kos.kamar_mandi === "Dalam" },
       ].map((b) => (
         <span key={b.label} style={{
-          backgroundColor: b.active ? "#EFF6FF" : "#F8FAFC",
-          color: b.active ? "#1E40AF" : "#94A3B8",
+          backgroundColor: b.active ? "#EFF6FF" : "#F9FAFB",
+          color: b.active ? "#1D4ED8" : "#9CA3AF",
           fontSize: "11px",
           fontWeight: 500,
           padding: "3px 10px",
-          borderRadius: "20px",
-          display: "inline-flex",
-          alignItems: "center",
-          gap: "4px",
-        }}>{b.emoji} {b.label}</span>
+          borderRadius: "5px",
+          border: b.active ? "1px solid #BFDBFE" : "1px solid #F3F4F6",
+        }}>{b.label}</span>
       ))}
     </div>
   </div>
@@ -74,33 +57,35 @@ const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
 
 export default function HasilRekomendasi({ hasil }: { hasil: HasilPrediksi }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "24px", fontFamily: "'Inter', sans-serif" }}>
+
+      {/* Estimasi harga */}
       <div style={{
-        backgroundColor: "#0F172A",
-        borderRadius: "20px",
+        backgroundColor: navy,
+        borderRadius: "12px",
         padding: "24px 28px",
-        color: "white",
       }}>
-        <p style={{ color: "#F59E0B", fontSize: "13px", fontWeight: 500, marginBottom: "6px" }}>📈 Estimasi Harga Kos</p>
-        <p style={{ fontSize: "32px", fontWeight: 800, letterSpacing: "-0.5px" }}>
+        <p style={{ color: "#7EB3FF", fontSize: "11px", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px" }}>Estimasi Harga</p>
+        <p style={{ color: "white", fontSize: "30px", fontWeight: 800, letterSpacing: "-0.5px", marginBottom: "4px" }}>
           Rp {hasil.prediksi_harga.toLocaleString("id-ID")}
         </p>
-        <p style={{ color: "#475569", fontSize: "12px", marginTop: "4px" }}>per bulan · Cluster {hasil.cluster}</p>
+        <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "12px" }}>per bulan</p>
       </div>
 
+      {/* List rekomendasi */}
       <div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "14px" }}>
-          <p style={{ fontWeight: 700, fontSize: "15px", color: "#0F172A" }}>🏠 Rekomendasi Kos</p>
+          <p style={{ fontWeight: 700, fontSize: "14px", color: navy }}>Rekomendasi Kos</p>
           <span style={{
-            backgroundColor: "#F1F5F9",
-            color: "#64748B",
+            backgroundColor: "#F3F4F6",
+            color: gray,
             fontSize: "12px",
             fontWeight: 500,
-            padding: "3px 12px",
-            borderRadius: "20px",
+            padding: "3px 10px",
+            borderRadius: "5px",
           }}>{hasil.rekomendasi.length} kos</span>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
           {hasil.rekomendasi.map((kos, i) => (
             <KosCard key={i} kos={kos} rank={i + 1} />
           ))}

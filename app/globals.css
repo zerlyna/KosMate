@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
@@ -13,92 +15,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.btn-primary {
-  background-color: #0F172A;
-  color: white;
-  border: none;
-  padding: 14px 24px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 14px;
+a {
+  pointer-events: auto;
   cursor: pointer;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: background-color 0.2s;
-}
-
-.btn-primary:hover {
-  background-color: #1E293B;
-}
-
-.btn-primary:disabled {
-  background-color: #94A3B8;
-  cursor: not-allowed;
-}
-
-.btn-option {
-  flex: 1;
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.15s;
-  border: 2px solid #E2E8F0;
-  background-color: white;
-  color: #0F172A;
-}
-
-.btn-option.active {
-  background-color: #0F172A;
-  color: white;
-  border-color: #0F172A;
-}
-
-.card {
-  background-color: white;
-  border: 1px solid #E2E8F0;
-  border-radius: 16px;
-  padding: 28px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 500;
-}
-
-.badge-active {
-  background-color: #EFF6FF;
-  color: #1E40AF;
-}
-
-.badge-inactive {
-  background-color: #F8FAFC;
-  color: #94A3B8;
-}
-
-.kos-card {
-  background: white;
-  border: 1px solid #E2E8F0;
-  border-radius: 14px;
-  padding: 18px 20px;
-  transition: box-shadow 0.2s;
-}
-
-.kos-card:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.kos-card.top {
-  border: 2px solid #F59E0B;
 }
 
 ::-webkit-scrollbar { width: 5px; }
