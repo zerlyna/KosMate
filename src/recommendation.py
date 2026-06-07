@@ -17,6 +17,7 @@ def get_recommendation(
 
     query = f"""
     SELECT
+        id,
         nama_kos AS "Nama Kos",
         jenis AS "Jenis",
         harga AS "Harga",
@@ -32,32 +33,28 @@ def get_recommendation(
 
     hasil = pd.read_sql(
         query,
-        engine
-    )
+        engine)
 
     # =========================
     # HITUNG SELISIH HARGA
     # =========================
 
     hasil["Selisih_Harga"] = abs(
-        hasil["Harga"] - prediksi_harga
-    )
+        hasil["Harga"] - prediksi_harga)
 
     # =========================
     # SORT REKOMENDASI
     # =========================
 
     hasil = hasil.sort_values(
-        by="Selisih_Harga"
-    )
+        by="Selisih_Harga")
 
     # =========================
     # DROP KOLOM BANTUAN
     # =========================
 
     hasil = hasil.drop(
-        columns=["Selisih_Harga"]
-    )
+        columns=["Selisih_Harga"])
 
     return hasil.to_dict(
         orient="records")

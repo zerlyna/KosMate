@@ -1,6 +1,10 @@
-import pandas as pd
+from src.database import SessionLocal
 
-from src.database import engine
+from src.models_db import (
+    UserInput,
+    PredictionResult,
+    RecommendationHistory
+)
 
 # =========================
 # SAVE HISTORY
@@ -9,26 +13,53 @@ from src.database import engine
 def save_history(
     data,
     prediksi_harga,
-    cluster
+    cluster,
+    rekomendasi
 ):
 
-    history = pd.DataFrame({
-        "jarak": [data["jarak"]],
-        "jenis": [data["jenis"]],
-        "wifi": [data["wifi"]],
-        "ac": [data["ac"]],
-        "dapur": [data["dapur"]],
-        "listrik": [data["listrik"]],
-        "kamar_mandi": [data["kamar_mandi"]],
-        "prediksi_harga": [prediksi_harga],
-        "cluster": [cluster]
-    })
+    db = SessionLocal()
+    try:
 
-    history.to_sql(
-        "history_predict",
-        engine,
-        if_exists="append",
-        index=False
-    )
+        # =========================
+        # SIMPAN USER INPUT
+        # =========================
 
-    print("History berhasil disimpan")
+        user = UserInput(
+            jarak=data["jarak"],
+            jenis=data["jenis"],
+            wifi=data["wifi"],
+            ac=data["ac"],
+            dapur=data["dapur"],
+            listrik=data["listrik"],
+            kamar_mandi=data["kamar_mandi"])
+
+        db.add(user)
+        db.commit()
+        db.refresh(user)
+
+        # SIMPAN HASIL PREDIKSI
+
+        prediction = PredictionResult(
+            user_input_id=user.id,
+            prediksi_harga=prediksi_harga,
+            cluster=cluster)
+
+        db.add(prediction)
+        db.commit()
+        db.refresh(prediction)
+
+        # SIMPAN REKOMENDASI
+        for kos in rekomendasi:
+            rec = RecommendationHistory(
+                prediction_result_id=prediction.id,
+                kos_id=kos["id"])
+            db.add(rec)
+
+        db.commit()
+        print("History berhasil disimpan")
+    except Exception as e:
+
+        db.rollback()
+        print("Error:", e)
+    finally:
+        db.close()
