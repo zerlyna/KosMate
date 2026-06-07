@@ -27,25 +27,37 @@ def get_recommendation(
         listrik AS "Listrik",
         kamar_mandi AS "Kamar mandi"
     FROM kos_data
-    WHERE cluster_kmeans = {cluster}
+    WHERE cluster = {cluster}
     """
 
     hasil = pd.read_sql(
         query,
         engine
     )
+
+    # =========================
     # HITUNG SELISIH HARGA
+    # =========================
 
-    hasil["selisih_harga"] = abs(hasil["harga"] - prediksi_harga)
+    hasil["Selisih_Harga"] = abs(
+        hasil["Harga"] - prediksi_harga
+    )
 
+    # =========================
     # SORT REKOMENDASI
+    # =========================
 
-    hasil = hasil.sort_values(by="selisih_harga")
+    hasil = hasil.sort_values(
+        by="Selisih_Harga"
+    )
 
+    # =========================
     # DROP KOLOM BANTUAN
+    # =========================
 
     hasil = hasil.drop(
-        columns=["selisih_harga"])
+        columns=["Selisih_Harga"]
+    )
 
     return hasil.to_dict(
         orient="records")
