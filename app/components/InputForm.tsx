@@ -62,6 +62,8 @@ export default function InputForm({ onSubmit, loading }: Props) {
     kamar_mandi: "Dalam",
   });
 
+  const [jarakInput, setJarakInput] = useState("");
+
   return (
     <form
       onSubmit={(e) => { e.preventDefault(); onSubmit(form); }}
@@ -85,10 +87,13 @@ export default function InputForm({ onSubmit, loading }: Props) {
           <input
             type="text"
             placeholder="Contoh: 1.5"
-            value={form.jarak === 0 ? "" : form.jarak}
+            value={jarakInput}
             onChange={(e) => {
               const val = e.target.value;
-              setForm({ ...form, jarak: val === "" ? 0 : parseFloat(val) });
+              if (val === "" || /^\d*\.?\d*$/.test(val)) {
+                setJarakInput(val);
+                setForm({ ...form, jarak: val === "" || val === "." ? 0 : parseFloat(val) });
+              }
             }}
             style={{
               width: "100%",
