@@ -22,7 +22,7 @@ const formatRupiah = (val: any) =>
 export default function Dashboard() {
   const navy = "#1E3A8A";
   const gray = "#6B7280";
-  const blue = "#3B82F6";
+  const blue = "#436aa9";
 
   // ✅ SEBARAN HARGA (INI SUDAH BENAR)
   const sebaranHarga = [
@@ -48,9 +48,6 @@ export default function Dashboard() {
 
   { name: "WiFi Ada", jumlah: 160 }
   ];
-
-  // ❗ HAPUS: dapur & listrik (biar sesuai visual lo)
-  // ❗ TIDAK ADA PARKIR
 
   // ✅ JENIS KOS (SESUAI CSV)
   const jenisKos = [
