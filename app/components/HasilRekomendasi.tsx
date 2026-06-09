@@ -25,7 +25,7 @@ const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
           <p style={{ fontWeight: 600, fontSize: "14px", color: navy, marginBottom: "4px" }}>{kos.nama_kos}</p>
           <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
             <p style={{ fontSize: "12px", color: gray }}>{kos.jarak} km dari PENS</p>
-            <span style={{ color: "#E5E7EB" }}>Â·</span>
+            <span style={{ color: "#E5E7EB" }}>·</span>
             <span style={{
               backgroundColor: "#F3F4F6",
               color: gray,
