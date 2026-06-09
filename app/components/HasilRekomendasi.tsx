@@ -9,10 +9,9 @@ const gray = "#6B7280";
 const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
   <div style={{
     backgroundColor: "white",
-    border: "1px solid #E5E7EB",
+    border: rank === 1 ? `2px solid ${blue}` : "1px solid #E5E7EB",
     borderRadius: "12px",
     padding: "20px 24px",
-    borderLeft: rank === 1 ? `3px solid ${blue}` : "1px solid #E5E7EB",
   }}>
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "14px" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
@@ -23,8 +22,8 @@ const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
           minWidth: "20px",
         }}>#{rank}</span>
         <div>
-          <p style={{ fontWeight: 600, fontSize: "14px", color: navy, marginBottom: "3px" }}>{kos.nama_kos}</p>
-          <div style={{ display: "flex", gap: "8px", alignItems: "center", marginTop: "3px" }}>
+          <p style={{ fontWeight: 600, fontSize: "14px", color: navy, marginBottom: "4px" }}>{kos.nama_kos}</p>
+          <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
             <p style={{ fontSize: "12px", color: gray }}>{kos.jarak} km dari PENS</p>
             <span style={{ color: "#E5E7EB" }}>·</span>
             <span style={{
@@ -34,7 +33,8 @@ const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
               fontWeight: 500,
               padding: "1px 8px",
               borderRadius: "4px",
-        }}>{kos.jenis}</span>
+            }}>{kos.jenis}</span>
+          </div>
         </div>
       </div>
       <div style={{ textAlign: "right" }}>
@@ -69,7 +69,6 @@ export default function HasilRekomendasi({ hasil }: { hasil: HasilPrediksi }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "24px", fontFamily: "'Inter', sans-serif" }}>
 
-      {/* Estimasi harga */}
       <div style={{
         backgroundColor: navy,
         borderRadius: "12px",
@@ -82,7 +81,6 @@ export default function HasilRekomendasi({ hasil }: { hasil: HasilPrediksi }) {
         <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "12px" }}>per bulan</p>
       </div>
 
-      {/* List rekomendasi */}
       <div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "14px" }}>
           <p style={{ fontWeight: 700, fontSize: "14px", color: navy }}>Rekomendasi Kos</p>
@@ -104,10 +102,3 @@ export default function HasilRekomendasi({ hasil }: { hasil: HasilPrediksi }) {
     </div>
   );
 }
-
-
-
-
-
-
-
