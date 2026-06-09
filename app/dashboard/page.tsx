@@ -118,7 +118,7 @@ export default function Dashboard() {
         {/* 🔹 Scatter */}
         <div style={card}>
           <p style={title}>Aktual vs Prediksi</p>
-          <p style={subtitle}>Simulasi 160 data (harusnya dari model)</p>
+        
 
           <ResponsiveContainer width="100%" height={300}>
             <ScatterChart>
