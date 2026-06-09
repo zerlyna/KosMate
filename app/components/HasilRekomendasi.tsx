@@ -1,4 +1,4 @@
-"use client";
+ï»¿"use client";
 
 import { HasilPrediksi, Kos } from "@/lib/api";
 
@@ -25,7 +25,7 @@ const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
           <p style={{ fontWeight: 600, fontSize: "14px", color: navy, marginBottom: "4px" }}>{kos.nama_kos}</p>
           <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
             <p style={{ fontSize: "12px", color: gray }}>{kos.jarak} km dari PENS</p>
-            <span style={{ color: "#E5E7EB" }}>·</span>
+            <span style={{ color: "#E5E7EB" }}>.</span>
             <span style={{
               backgroundColor: "#F3F4F6",
               color: gray,
@@ -42,7 +42,6 @@ const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
         <p style={{ fontSize: "11px", color: "#9CA3AF" }}>/ bulan</p>
       </div>
     </div>
-
     <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", paddingTop: "12px", borderTop: "1px solid #F3F4F6" }}>
       {[
         { label: "WiFi", active: kos.wifi === "Ada" },
@@ -67,8 +66,7 @@ const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
 
 export default function HasilRekomendasi({ hasil }: { hasil: HasilPrediksi }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "24px", fontFamily: "'Inter', sans-serif" }}>
-
+    <div style={{ display: "flex", flexDirection: "column", gap: "24px", fontFamily: "Inter, sans-serif" }}>
       <div style={{
         backgroundColor: navy,
         borderRadius: "12px",
@@ -80,7 +78,6 @@ export default function HasilRekomendasi({ hasil }: { hasil: HasilPrediksi }) {
         </p>
         <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "12px" }}>per bulan</p>
       </div>
-
       <div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "14px" }}>
           <p style={{ fontWeight: 700, fontSize: "14px", color: navy }}>Rekomendasi Kos</p>
