@@ -131,7 +131,7 @@ export default function LandingPage() {
 
             <div style={{ display: "flex", gap: "40px", marginTop: "48px", paddingTop: "40px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
               {[
-                { angka: "160+", label: "Data Kos" },
+                { angka: "150+", label: "Data Kos" },
                 { angka: "< 3km", label: "Dari PENS" },
                 { angka: "Gratis", label: "Tanpa Biaya" },
               ].map((s) => (
