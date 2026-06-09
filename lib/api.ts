@@ -14,9 +14,10 @@ export interface InputUser {
 
 export interface Kos {
   nama_kos: string;
-  jenis: string;
+  jenis: string; 
   harga: number;
   jarak: number;
+
   wifi: string;
   ac: string;
   dapur: string;
@@ -30,24 +31,63 @@ export interface HasilPrediksi {
   rekomendasi: Kos[];
 }
 
-// mapping response backend ke format frontend
+
+function normalize(value: unknown): string {
+  if (!value) return "";
+
+  const v = String(value).toLowerCase();
+
+  if (v.includes("ada")) return "Ada";
+  if (v.includes("tidak")) return "Tidak";
+  if (v.includes("include")) return "Include";
+  if (v.includes("exclude")) return "Exclude";
+
+  if (v.includes("dalam")) return "Dalam";
+  if (v.includes("luar")) return "Luar";
+
+  if (v.includes("putra")) return "Putra";
+  if (v.includes("putri")) return "Putri";
+  if (v.includes("campur")) return "Campur";
+
+  return String(value);
+}
+
+
 function mapRekomendasi(raw: Record<string, unknown>[]): Kos[] {
   return raw.map((k) => ({
     nama_kos: (k["Nama Kos"] ?? k["nama_kos"] ?? "") as string,
-    jenis: (k["Jenis"] ?? k["jenis"] ?? "") as string,
-    harga: (k["Harga"] ?? k["harga"] ?? 0) as number,
-    jarak: (k["Jarak dari PENS"] ?? k["jarak"] ?? 0) as number,
-    wifi: (k["WiFi"] ?? k["wifi"] ?? "") as string,
-    ac: (k["AC"] ?? k["ac"] ?? "") as string,
-    dapur: (k["Dapur"] ?? k["dapur"] ?? "") as string,
-    listrik: (k["Listrik"] ?? k["listrik"] ?? "") as string,
-    kamar_mandi: (k["Kamar mandi"] ?? k["kamar_mandi"] ?? "") as string,
+
+
+    jenis: normalize(
+      k["Jenis Kos"] ??
+      k["jenis_kos"] ??
+      k["Jenis"] ??
+      k["jenis"]
+    ),
+
+    harga: Number(k["Harga"] ?? k["harga"] ?? 0),
+
+    jarak: Number(
+      k["Jarak dari PENS"] ??
+      k["jarak"] ??
+      0
+    ),
+
+    wifi: normalize(k["WiFi"] ?? k["wifi"]),
+    ac: normalize(k["AC"] ?? k["ac"]),
+    dapur: normalize(k["Dapur"] ?? k["dapur"]),
+    listrik: normalize(k["Listrik"] ?? k["listrik"]),
+    kamar_mandi: normalize(
+      k["Kamar mandi"] ??
+      k["kamar_mandi"]
+    ),
   }));
 }
 
 export async function getRekomendasi(input: InputUser): Promise<HasilPrediksi> {
   const response = await axios.post(`${API_URL}/predict`, input);
   const data = response.data;
+
   return {
     prediksi_harga: data.prediksi_harga,
     cluster: data.cluster,
