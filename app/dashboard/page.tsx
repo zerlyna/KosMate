@@ -34,9 +34,19 @@ export default function Dashboard() {
 
   // ✅ FASILITAS (SESUAI CSV ASLI)
   const fasilitas = [
-    { name: "WiFi", jumlah: 160 },
-    { name: "AC", jumlah: 160 },
-    { name: "Kamar Mandi", jumlah: 160 },
+  { name: "AC - Ada", jumlah: 40 },
+  { name: "AC - Tidak", jumlah: 120 },
+
+  { name: "Kamar Mandi Dalam", jumlah: 50 },
+  { name: "Kamar Mandi Luar", jumlah: 110 },
+
+  { name: "Dapur Ada", jumlah: 100 },
+  { name: "Dapur Tidak", jumlah: 60 },
+
+  { name: "Listrik Include", jumlah: 130 },
+  { name: "Listrik Exclude", jumlah: 30 },
+
+  { name: "WiFi Ada", jumlah: 160 }
   ];
 
   // ❗ HAPUS: dapur & listrik (biar sesuai visual lo)
