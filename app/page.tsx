@@ -63,15 +63,18 @@ export default function LandingPage() {
           </div>
           <span style={{ fontSize: "18px", fontWeight: 700, color: navy, letterSpacing: "-0.3px" }}>KosMate</span>
         </div>
-        <Link href="/cari" style={{
-          backgroundColor: blue,
-          color: "white",
-          padding: "8px 22px",
-          borderRadius: "8px",
-          fontWeight: 600,
-          fontSize: "14px",
-          textDecoration: "none",
-        }}>Cari Kos</Link>
+        <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
+          <Link href="/dashboard" style={{ fontSize: "14px", color: gray, textDecoration: "none", fontWeight: 500 }}>Dashboard</Link>
+          <Link href="/cari" style={{
+            backgroundColor: blue,
+            color: "white",
+            padding: "8px 22px",
+            borderRadius: "8px",
+            fontWeight: 600,
+            fontSize: "14px",
+            textDecoration: "none",
+          }}>Cari Kos</Link>
+        </div>
       </nav>
 
       {/* Hero */}
@@ -150,13 +153,7 @@ export default function LandingPage() {
             <div style={{ padding: "16px 20px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
               <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "1px" }}>Rekomendasi Untukmu</p>
             </div>
-            <div
-              ref={scrollRef}
-              style={{
-                height: "240px",
-                overflowY: "hidden",
-              }}
-            >
+            <div ref={scrollRef} style={{ height: "240px", overflowY: "hidden" }}>
               {kos.map((k, i) => (
                 <div key={i} style={{
                   padding: "16px 20px",
