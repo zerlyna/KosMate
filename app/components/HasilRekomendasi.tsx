@@ -24,7 +24,17 @@ const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
         }}>#{rank}</span>
         <div>
           <p style={{ fontWeight: 600, fontSize: "14px", color: navy, marginBottom: "3px" }}>{kos.nama_kos}</p>
-          <p style={{ fontSize: "12px", color: gray }}>{kos.jarak} km dari PENS</p>
+          <div style={{ display: "flex", gap: "8px", alignItems: "center", marginTop: "3px" }}>
+            <p style={{ fontSize: "12px", color: gray }}>{kos.jarak} km dari PENS</p>
+            <span style={{ color: "#E5E7EB" }}>·</span>
+            <span style={{
+              backgroundColor: "#F3F4F6",
+              color: gray,
+              fontSize: "11px",
+              fontWeight: 500,
+              padding: "1px 8px",
+              borderRadius: "4px",
+        }}>{kos.jenis}</span>
         </div>
       </div>
       <div style={{ textAlign: "right" }}>
