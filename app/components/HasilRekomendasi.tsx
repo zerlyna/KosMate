@@ -59,7 +59,7 @@ const KosCard = ({ kos, rank }: { kos: Kos; rank: number }) => (
               marginBottom: "2px",
             }}
           >
-            {kos.jenis_kos}
+            {kos.jenis}
           </p>
 
           {/* JARAK */}

@@ -17,7 +17,7 @@ export interface Kos {
   jenis: string; 
   harga: number;
   jarak: number;
-
+  alamat: string;
   wifi: string;
   ac: string;
   dapur: string;
@@ -57,7 +57,6 @@ function mapRekomendasi(raw: Record<string, unknown>[]): Kos[] {
   return raw.map((k) => ({
     nama_kos: (k["Nama Kos"] ?? k["nama_kos"] ?? "") as string,
 
-
     jenis: normalize(
       k["Jenis Kos"] ??
       k["jenis_kos"] ??
@@ -72,6 +71,9 @@ function mapRekomendasi(raw: Record<string, unknown>[]): Kos[] {
       k["jarak"] ??
       0
     ),
+
+    // ✅ TAMBAHKAN INI
+    alamat: (k["Alamat"] ?? k["alamat"] ?? "") as string,
 
     wifi: normalize(k["WiFi"] ?? k["wifi"]),
     ac: normalize(k["AC"] ?? k["ac"]),
